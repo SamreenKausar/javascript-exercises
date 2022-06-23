@@ -30,8 +30,13 @@ const power = function(a, n) {
   return power;
 };
 
-const factorial = function() {
-	
+const factorial = function(a) {
+	let factorial= 1;
+  while(a){
+    factorial=factorial*a;
+    a--;
+  }
+  return factorial;
 };
 
 // Do not edit below this line

@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --lavender-web: #e3dfffff;
+    --languid-lavender: #d3c0cdff;
+    --tuscany: #b19994ff;
+    --beaver: #937666ff;
+    --dark-liver: #3d3a4bff;
+    --white: #fff;
+}
+body{
+    background-color: var(--lavender-web);
+
+}
+.container{
+    display: grid;
+    grid-template:100px auto /1fr;
+    gap: 24px;
+}
+.inputBook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--dark-liver);
+    color: var(--white);
+}
+
+
+
+#main{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+     height: 200px;
+     width: 150px;
+     background-color: yellow;
+     padding: 16px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+}

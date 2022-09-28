@@ -4,23 +4,26 @@
     padding: 0;
 }
 :root{
-    --lavender-web: #e3dfffff;
+    --lavender-web: #ECF1F0;
     --languid-lavender: #d3c0cdff;
     --tuscany: #b19994ff;
-    --beaver: #937666ff;
-    --dark-liver: #3d3a4bff;
+    --beaver: #D97B2F;
+    --dark-liver: #2C5261;
     --white: #fff;
 }
 body{
     background-color: var(--lavender-web);
+    font-family: 'Poppins', sans-serif;
 
 }
 .container{
     display: grid;
     grid-template:100px auto /1fr;
-    gap: 24px;
+    
 }
 .inputBook {
+    font-size: 24px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,21 +32,60 @@ body{
     background-color: var(--dark-liver);
     color: var(--white);
 }
+ .input{
+    width: 200px;
+    height: 28px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px ;
+    padding: 3px 7px;
+    color: var(--dark-liver);
+ }
 
+ #submit, #read {
+    background-color: var(--white);
+    color: var(--dark-liver);
+    border: 1px solid var(--white);
+    padding: 3px 21px;
+    font-size: 21px;
+    border-radius: 3px;
+ }
+  {
+
+ }
 
 
 #main{
+    margin: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    
 }
 .card {
-     height: 200px;
-     width: 150px;
-     background-color: yellow;
-     padding: 16px;
+     columns: 1/2;
+     height: 350px;
+     width: 300px;
+     margin: 24px;
+     background-color: var(--beaver);
+     border: 1px solid var(--beaver);
+     border-radius: 5px;
+     color: var(--white);
+     font-size: 18px;
+     font-weight: bold;
+     padding: 24px;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
      align-items: center;
+}
+#delete{
+        padding: 4px 24px;
+        font-size: 24px;
+        border: none;
+        border-radius: 3px;
+        background-color: var(--white);
+        color: var(--beaver);
 }

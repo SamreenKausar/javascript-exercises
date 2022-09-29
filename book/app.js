@@ -8,6 +8,9 @@ const pages = document.querySelector('#pages');
 const read = document.querySelector('#read');
 const submit = document.querySelector('#submit');
 const main = document.querySelector('#main');
+const addBook = document.querySelector('#addBook');
+const inputBook = document.querySelector('#inputBook');
+let bookcount = 0; 
 // constructor to create book object
 function Book(title, author, pages, read){
     this.title =title;
@@ -30,21 +33,22 @@ const addToTheLibrary =  function(title, author, pages, read){
 
 // function to get values from the input
 const getValues = function(){
-    
+    main.textContent = ''; 
+    inputBook.classList.toggle('hidden');
     addToTheLibrary(title.value, author.value, pages.value, read.value);
-    displayBook(title.value, author.value, pages.value, read.value);
+    displayBook(library);
     title.value = '';
     author.value = '';
     pages.value = '';
     read.value = '';
-
+    // console.log(bookcount);
 }
 // submitting the values
 
 submit.addEventListener('click', getValues);
 // creating the card element for book 
 
-const createCard = function(titleVal, authorval, pagesVal, readVal){
+const createCard = function(titleVal, authorval, pagesVal, readVal, bookcount){
 
     //creatting elements of the carc
     const div = document.createElement('div');
@@ -56,11 +60,12 @@ const createCard = function(titleVal, authorval, pagesVal, readVal){
 
     //adding class to the card elements
     div.classList.add('card');
+    div.dataset.indexNumber= bookcount;
     title.classList.add('list');
     author.classList.add('list');
     pages.classList.add('list');
     read.classList.add('list');
-    deleteBtn.setAttribute('id', 'delete')
+    deleteBtn.classList.add('delete');
 
     //Adding text node
     title.textContent = 'Title: '+titleVal;
@@ -68,6 +73,7 @@ const createCard = function(titleVal, authorval, pagesVal, readVal){
     pages.textContent='Pages: '+pagesVal;
     read.textContent = 'Read: '+readVal;
     deleteBtn.textContent = 'delete' ;
+    deleteBtn.dataset.indexNumber = bookcount;
     //Appending elements
     div.appendChild(title);
     div.appendChild(author);
@@ -79,11 +85,17 @@ const createCard = function(titleVal, authorval, pagesVal, readVal){
 }
 //displaying the library content
 
-const displayBook = function(title, author, pages, read){
-    
-        createCard(title, author, pages, read);
-        
+const displayBook = function(library){
+    library.forEach(element => {
+        createCard(element.title, element.author, element.pages, element.read, bookcount);
+        bookcount++;
+    });      
 }
+
+addBook.addEventListener('click', () =>{
+    inputBook.classList.toggle('hidden');
+})
+
 
 
 

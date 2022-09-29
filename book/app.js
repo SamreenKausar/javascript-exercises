@@ -63,10 +63,10 @@ const createCard = function(titleVal, authorval, pagesVal, readVal){
     deleteBtn.setAttribute('id', 'delete')
 
     //Adding text node
-    title.textContent = titleVal;
-    author.textContent = authorval;
-    pages.textContent=pagesVal;
-    read.textContent = readVal;
+    title.textContent = 'Title: '+titleVal;
+    author.textContent = 'Author: '+authorval;
+    pages.textContent='Pages: '+pagesVal;
+    read.textContent = 'Read: '+readVal;
     deleteBtn.textContent = 'delete' ;
     //Appending elements
     div.appendChild(title);

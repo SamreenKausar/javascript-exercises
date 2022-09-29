@@ -13,19 +13,26 @@
 </head>
 <body>
   <div class="container">
-    <div class="inputBook">
-      <label for="title">Title: </label> <input class="input" type="text" id="title">
-      <label for="author">Author: </label>  <input class="input" type="text" id="author">
-      <label for="pages">Pages: </label> <input class="input" type="number" id="pages">
-      <label for="read">Read the book :</label>
-      <select id="read" name= "read">
-        <option value="yes">Yes</option>
-        <option value="No">No</option>
+    <div class="header">
+      <div class="logo">
+        <img src="library.svg" class="icon">
+        <h1>Library Log</h1>
+      </div>
+      <button id="addBook">+</button>
+    </div>
+    <div class="hidden" id="inputBook">
+      <input class="input" type="text" id="title" placeholder="title">
+      <input class="input" type="text" id="author" placeholder="author">
+      <input class="input" type="number" id="pages" placeholder="0">
+      <select id="read" class="inputBtn" name= "read">
+        <option value="yes"> Read</option>
+        <option value="No">Not Read</option>
       </select>
-      <button  name="submit" id="submit" value="Submit">Submit</button>
+      <button  name="edit" class="inputBtn" id="edit" value="edit">Edit</button>
+      <button  name="submit" class="inputBtn" id="submit" value="Submit">Submit</button>
     </div>
     <div id="main">
-
+      
     </div>
   </div>
 </body>

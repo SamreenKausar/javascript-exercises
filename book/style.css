@@ -119,9 +119,13 @@ body{
      display: flex;
      flex-direction: column;
      justify-content: space-evenly;
-     align-items: flex-start;
+     align-items: stretch;
+     -webkit-box-shadow: 2px 2px 9px -1px rgba(36,35,36,0.32);
+    -moz-box-shadow: 2px 2px 9px -1px rgba(36,35,36,0.32);
+    box-shadow: 2px 2px 9px -1px rgba(36,35,36,0.32);
+
 }
-.delete{
+.deletebtn{
         padding: 4px 24px;
         font-size: 24px;
         border: none;
